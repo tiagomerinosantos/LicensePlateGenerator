@@ -454,32 +454,40 @@ namespace LicensePlateGenerator
         
         private void btnGenerate_Click(object sender, EventArgs e)
         {
-            string licensePlateText = txtLicensePlate.Text.Replace(" ", "").Replace("-", "").Trim().ToUpper();
-            // Display a generate message
-            lbStatus.Text = "A gerar imagem...";
-
-            //Verify Empty Fields
-            if (!VerifyEmptyFields(licensePlateText))
+            try
             {
-                return;
-            }
+                string licensePlateText = txtLicensePlate.Text.Replace(" ", "").Replace("-", "").Trim().ToUpper();
+                // Display a generate message
+                lbStatus.Text = "A gerar imagem...";
 
-            //Verify Separator
-            string separator = "";
-            if (!cbSeparator.Text.Equals("Vazio"))
+                //Verify Empty Fields
+                if (!VerifyEmptyFields(licensePlateText))
+                {
+                    return;
+                }
+
+                //Verify Separator
+                string separator = "";
+                if (!cbSeparator.Text.Equals("Vazio"))
+                {
+                    separator = cbSeparator.Text.PadLeft(2, Char.Parse(" ")).PadRight(3, Char.Parse(" "));
+                }
+
+                licensePlateText = licensePlateText.Substring(0, 2) + separator + licensePlateText.Substring(2, 2) + separator + licensePlateText.Substring(4, 2);
+                //Get background image
+                (string backgroundTemplatePath, Color color) = LoadBackground();
+
+                //Generate image
+                Bitmap backgroundTemplate = GenerateImage(backgroundTemplatePath, color, licensePlateText);
+
+                //Save image
+                SaveImage(backgroundTemplate, licensePlateText.Replace(separator, "-"));
+            }
+            catch(Exception ex)
             {
-                separator = cbSeparator.Text.PadLeft(2,Char.Parse(" ")).PadRight(3, Char.Parse(" "));
+                MessageBox.Show("Existiu um erro ao gerar a imagem. Detalhes: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            licensePlateText = licensePlateText.Substring(0, 2) + separator + licensePlateText.Substring(2, 2) + separator + licensePlateText.Substring(4, 2);
-            //Get background image
-            (string backgroundTemplatePath, Color color) = LoadBackground();
-
-            //Generate image
-            Bitmap backgroundTemplate =  GenerateImage(backgroundTemplatePath, color, licensePlateText);
-
-            //Save image
-            SaveImage(backgroundTemplate, licensePlateText.Replace(separator, "-"));
+            
         }
 
         
