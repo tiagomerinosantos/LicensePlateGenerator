@@ -11,7 +11,8 @@ License Plate Generator is a C# Windows Forms application designed to facilitate
 - **Installation Package:** The project provides a Windows installer (MSI) for easy installation on Windows systems, making it accessible to a broad audience.
 
 ## Installation:
-- Download <a id="raw-url" href="https://github.com/tiagomerinosantos/LicensePlateGenerator/releases/tag/LicensePlateGenerator_Release">LicensePlateGeneratorSetup.msi</a> file available (Windows ONLY)
+- **Platform Compatibility:** The application is designed for Windows operating systems
+- Download <a id="raw-url" href="https://github.com/tiagomerinosantos/LicensePlateGenerator/releases/tag/LicensePlateGenerator_Release">LicensePlateGeneratorSetup.msi</a> file available
 - Start the instalation
 - Run the Shortcut on the Desktop
 
@@ -33,7 +34,6 @@ License Plate Generator is a C# Windows Forms application designed to facilitate
 ![Template](https://github.com/tiagomerinosantos/LicensePlateGenerator/assets/90798124/6be66e9d-5068-4551-a2fe-5366d583d766)
 
 ## Acknowledgments:
-- **Platform Compatibility:** The application is designed for Windows operating systems
 - Feel free to explore, contribute, and leverage License Plate Generator for creating realistic and customized Portuguese car license plate images for scale models.
 
 ## Improvements to be made in the future
