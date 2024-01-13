@@ -53,6 +53,7 @@ namespace LicensePlateGenerator
             this.label6 = new System.Windows.Forms.Label();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.previewBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
@@ -212,17 +213,30 @@ namespace LicensePlateGenerator
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(393, 687);
+            this.label7.Location = new System.Drawing.Point(285, 671);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(185, 12);
+            this.label7.Size = new System.Drawing.Size(293, 12);
             this.label7.TabIndex = 20;
-            this.label7.Text = "Esta aplicação foi desenvolvida gratuitamente";
+            this.label7.Text = "Esta aplicação foi desenvolvida gratuitamente e disponibilizada no GitHub";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.linkLabel1.Location = new System.Drawing.Point(301, 684);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(277, 12);
+            this.linkLabel1.TabIndex = 21;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "https://github.com/tiagomerinosantos/LicensePlateGenerator/";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 706);
+            this.ClientSize = new System.Drawing.Size(590, 704);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.label6);
@@ -249,6 +263,7 @@ namespace LicensePlateGenerator
             this.ResumeLayout(false);
             this.PerformLayout();
             PopulateData();
+
         }
 
         #endregion
@@ -487,5 +502,6 @@ namespace LicensePlateGenerator
         private Label label6;
         private PictureBox pbLogo;
         private Label label7;
+        private LinkLabel linkLabel1;
     }
 }

@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Diagnostics;
 using System.IO;
 using System.Net.Http.Json;
+using System.Security.Policy;
 using System.Text.Json;
 
 namespace LicensePlateGenerator
@@ -75,5 +77,11 @@ namespace LicensePlateGenerator
 
         }
         private ConfigJson config;
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Open the default web browser with the specified URL
+            Process.Start("explorer", "https://github.com/tiagomerinosantos/LicensePlateGenerator/");
+        }
     }
 }
