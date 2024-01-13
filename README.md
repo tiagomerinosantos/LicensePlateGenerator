@@ -3,7 +3,7 @@
 
 This project was created to generate images of Portuguese car license plates in scales 1:18, 1:24, and 1:43.
 
-## Instructions:
+## How to Use:
 - Fill in the "Registration" field with the desired registration number in known formats, without spaces or dashes and with 6 letters/numbers
 - Fill in "Month" and "Year" if necessary
 - Choose the "Scale"
@@ -14,7 +14,7 @@ This project was created to generate images of Portuguese car license plates in 
 
 ![Template](https://github.com/tiagomerinosantos/LicensePlateGenerator/assets/90798124/6be66e9d-5068-4551-a2fe-5366d583d766)
 
-## How to Use:
+## Installation:
 - Download <a id="raw-url" href="https://github.com/tiagomerinosantos/LicensePlateGenerator/releases/tag/LicensePlateGenerator_Release">LicensePlateGeneratorSetup.msi</a> file available (Windows ONLY)
 - Start the instalation
 - Run the Shortcut on the Desktop
