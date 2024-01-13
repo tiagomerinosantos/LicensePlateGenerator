@@ -19,6 +19,11 @@ This project was created to generate images of Portuguese car license plates in 
 - Start the instalation
 - Run the Shortcut on the Desktop
 
+ If you have problems starting the app, please make sure that you have .Net installed: - 
+<a id="raw-url" href="https://github.com/tiagomerinosantos/LicensePlateGenerator/releases/tag/LicensePlateGenerator_Release">.NET 6.0 Desktop Runtime Installer.msi</a>
+ 
+![Capturar](https://github.com/tiagomerinosantos/LicensePlateGenerator/assets/90798124/93550324-5f2c-4d80-8884-f34ac9e66f33)
+
 ## Acknowledgments:
 - Only available for Windows.
 - Feel free to contribute and provide feedback to make this project even better!
