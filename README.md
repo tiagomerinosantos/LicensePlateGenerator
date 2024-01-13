@@ -37,7 +37,7 @@ License Plate Generator is a C# Windows Forms application designed to facilitate
 - Feel free to explore, contribute, and leverage License Plate Generator for creating realistic and customized Portuguese car license plate images for scale models.
 
 ## Improvements to be made in the future
-- Visual Preview: The application offers a visual preview of the generated license plate, allowing users to fine-tune their choices before saving the image.
+- Visual Preview of the generated license plate, allowing users to fine-tune their choices before saving the image.
 - Add more scales
 - Add square license plates
 
