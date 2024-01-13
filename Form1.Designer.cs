@@ -268,6 +268,9 @@ namespace LicensePlateGenerator
 
         #endregion
 
+        /// <summary>
+        /// Populates data for various controls in the form, such as loading the logo, adding items to ComboBoxes, and setting default selections.
+        /// </summary>
         private void PopulateData()
         {
             //Load Logo
@@ -306,6 +309,13 @@ namespace LicensePlateGenerator
             cbYear.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Resizes an Image to the specified width and height using high-quality bicubic interpolation.
+        /// </summary>
+        /// <param name="image">The Image to be resized.</param>
+        /// <param name="width">The desired width of the resized image.</param>
+        /// <param name="height">The desired height of the resized image.</param>
+        /// <returns>A Bitmap representing the resized image.</returns>
         private Bitmap ResizeImage(Image image, int width, int height)
         {
             Bitmap resizedImage = new Bitmap(width, height);
@@ -319,6 +329,13 @@ namespace LicensePlateGenerator
             return resizedImage;
         }
 
+        /// <summary>
+        /// Verifies whether the provided license plate text is valid.
+        /// </summary>
+        /// <param name="licensePlateText">The license plate text to be verified.</param>
+        /// <returns>
+        ///   <c>true</c> if the license plate text is valid; otherwise, <c>false</c>.
+        /// </returns>
         private Boolean VerifyEmptyFields(String licensePlateText)
         {
             if (string.IsNullOrWhiteSpace(licensePlateText))
@@ -336,6 +353,12 @@ namespace LicensePlateGenerator
             return true;
         }
 
+        /// <summary>
+        /// Loads the background photo template and associated font color based on the selected license plate type.
+        /// </summary>
+        /// <returns>
+        /// A tuple containing the file path to the background template and the font color as a Color object.
+        /// </returns>
         private (String, Color) LoadBackground()
         {
             // Load the background photo template
@@ -354,6 +377,13 @@ namespace LicensePlateGenerator
             return (backgroundTemplatePath, color);
         }
 
+        /// <summary>
+        /// Generates a new image with license plate text based on the provided background template and details.
+        /// </summary>
+        /// <param name="backgroundTemplatePath">The file path to the background template image.</param>
+        /// <param name="color">The font color for the license plate text.</param>
+        /// <param name="licensePlateText">The license plate text to be displayed on the image.</param>
+        /// <returns>A Bitmap representing the generated image with the license plate text.</returns>
         private Bitmap GenerateImage(string backgroundTemplatePath, Color color, string licensePlateText)
         {
             Bitmap backgroundTemplate = new Bitmap(backgroundTemplatePath);
@@ -421,6 +451,11 @@ namespace LicensePlateGenerator
             return backgroundTemplate;
         }
 
+        /// <summary>
+        /// Allows the user to select an output folder and saves the generated image with license plate text.
+        /// </summary>
+        /// <param name="backgroundTemplate">The Bitmap containing the generated image.</param>
+        /// <param name="licensePlateText">The license plate text used in the image filename.</param>
         private void SaveImage(Bitmap backgroundTemplate, string licensePlateText)
         {
             // Allow the user to select the output folder
@@ -451,7 +486,13 @@ namespace LicensePlateGenerator
                 }
             }
         }
-        
+
+        /// <summary>
+        /// Event handler for the Click event of btnGenerate.
+        /// Generates an image based on the provided license plate text and saves it to a user-selected folder.
+        /// </summary>
+        /// <param name="sender">The object that triggered the event (btnGenerate).</param>
+        /// <param name="e">An instance of the EventArgs class containing event data.</param>
         private void btnGenerate_Click(object sender, EventArgs e)
         {
             try

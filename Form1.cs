@@ -10,6 +10,10 @@ using System.Text.Json;
 namespace LicensePlateGenerator
 {    public partial class Form1 : Form
     {
+        /// <summary>
+        /// Initializes a new instance of the Form1 class.
+        /// Reads the configuration from the 'config.json' file using JSON deserialization and initializes the form components.
+        /// </summary>
         public Form1()
         {
             // Read the config file
@@ -18,11 +22,24 @@ namespace LicensePlateGenerator
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Event handler for the Click event of button1.
+        /// Invokes the btnGenerate_Click method to trigger the license plate generation process.
+        /// </summary>
+        /// <param name="sender">The object that triggered the event (button1).</param>
+        /// <param name="e">An instance of the EventArgs class containing event data.</param>
+
         private void button1_Click(object sender, EventArgs e)
         {
             btnGenerate_Click(sender, e);
         }
 
+        /// <summary>
+        /// Event handler for the SelectedIndexChanged event of the cbType (ComboBox).
+        /// Shows the corresponding image based on the selected license type.
+        /// </summary>
+        /// <param name="sender">The object that triggered the event (cbType ComboBox).</param>
+        /// <param name="e">An instance of the EventArgs class containing event data.</param>
         private void cbType_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Clear the image when no selection is made
@@ -42,6 +59,9 @@ namespace LicensePlateGenerator
             }
         }
 
+        /// <summary>
+        /// Represents the configuration details loaded from a JSON file.
+        /// </summary>
         public class ConfigJson
         {
             public List<LicenseType> licenseType { get; set; }
@@ -50,6 +70,9 @@ namespace LicensePlateGenerator
             public string logoImage { get; set; }
         }
 
+        /// <summary>
+        /// Represents a type of license plate with associated details such as name, image path, font color, and scales.
+        /// </summary>
         public class LicenseType
         {
             public string name { get; set; }
@@ -58,6 +81,9 @@ namespace LicensePlateGenerator
             public Dictionary<string, ScaleDetails> scales { get; set; }
         }
 
+        /// <summary>
+        /// Represents details related to the scale of a generated license plate.
+        /// </summary>
         public class ScaleDetails
         {
             public int fontSize { get; set; }
@@ -76,12 +102,19 @@ namespace LicensePlateGenerator
         {
 
         }
-        private ConfigJson config;
 
+        /// <summary>
+        /// Event handler for the LinkClicked event of linkLabel1.
+        /// Opens the default web browser with the specified URL.
+        /// </summary>
+        /// <param name="sender">The object that triggered the event.</param>
+        /// <param name="e">An instance of the LinkLabelLinkClickedEventArgs class containing event data.</param>
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Open the default web browser with the specified URL
             Process.Start("explorer", "https://github.com/tiagomerinosantos/LicensePlateGenerator/");
         }
+
+        private ConfigJson config;
     }
 }
