@@ -12,12 +12,12 @@ License Plate Generator is a C# Windows Forms application designed to facilitate
 
 ## Installation:
 - **Platform Compatibility:** The application is designed for Windows operating systems
-- Download <a id="raw-url" href="https://github.com/tiagomerinosantos/LicensePlateGenerator/releases/tag/LicensePlateGenerator_Release">LicensePlateGeneratorSetup.msi</a> file available
+- Download <a id="raw-url" href="https://github.com/tiagomerinosantos/LicensePlateGenerator/releases/">LicensePlateGeneratorSetup.msi</a> file available
 - Start the instalation
 - Run the Shortcut on the Desktop
 
  If you have problems starting the app, please make sure that you have .Net installed: - 
-<a id="raw-url" href="https://github.com/tiagomerinosantos/LicensePlateGenerator/releases/tag/LicensePlateGenerator_Release">.NET 6.0 Desktop Runtime Installer.msi</a>
+<a id="raw-url" href="https://github.com/tiagomerinosantos/LicensePlateGenerator/releases/">.NET 6.0 Desktop Runtime Installer.msi</a>
  
 ![Capturar](https://github.com/tiagomerinosantos/LicensePlateGenerator/assets/90798124/93550324-5f2c-4d80-8884-f34ac9e66f33)
 
