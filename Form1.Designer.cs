@@ -249,7 +249,6 @@ namespace LicensePlateGenerator
             this.ResumeLayout(false);
             this.PerformLayout();
             PopulateData();
-
         }
 
         #endregion

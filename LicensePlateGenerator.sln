@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicensePlateGenerator", "LicensePlateGenerator.csproj", "{8932CE6B-1C0F-45AA-92AB-0E7481A0DED3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LicensePlateGenerator", "LicensePlateGenerator.csproj", "{8932CE6B-1C0F-45AA-92AB-0E7481A0DED3}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "LicensePlateGeneratorSetup", "..\LicensePlateGeneratorSetup\LicensePlateGeneratorSetup.vdproj", "{9651080F-F195-4BC7-8857-5FB664F3DF15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,8 @@ Global
 		{8932CE6B-1C0F-45AA-92AB-0E7481A0DED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8932CE6B-1C0F-45AA-92AB-0E7481A0DED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8932CE6B-1C0F-45AA-92AB-0E7481A0DED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9651080F-F195-4BC7-8857-5FB664F3DF15}.Debug|Any CPU.ActiveCfg = Debug
+		{9651080F-F195-4BC7-8857-5FB664F3DF15}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
