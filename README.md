@@ -15,7 +15,7 @@ This project was created to generate images of Portuguese car license plates in 
 ![Template](https://github.com/tiagomerinosantos/LicensePlateGenerator/assets/90798124/6be66e9d-5068-4551-a2fe-5366d583d766)
 
 ## How to Use:
-- Download [LicensePlateGeneratorSetup.msi](LicensePlateGeneratorSetup.msi) file available (Windows ONLY)
+- Download <a id="raw-url" href="https://github.com/tiagomerinosantos/LicensePlateGenerator/blob/master/LicensePlateGeneratorSetup.msi">LicensePlateGeneratorSetup.msi</a> file available (Windows ONLY)
 - Start the instalation
 - Run the Shortcut on the Desktop
 
